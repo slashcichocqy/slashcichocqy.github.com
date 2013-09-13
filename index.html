@@ -1,0 +1,12 @@
+---
+title: My Blog.
+layout: post
+index: index
+fuzzydate: programmer
+---
+
+<ul>
+{% for post in site.posts %}
+<li>{{post.fuzzydate}} <a href="{{post.permalink | replace:'.html',''}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
